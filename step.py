@@ -10,9 +10,9 @@ col_drop = ['Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5']
 df_name = df_name.drop(columns=col_drop)
 st.image(logo_url)
 
-df_office = df_name['OFFICE']
+df_office = df_name[['OFFICE']].copy()
 df_office['Steps'] = 0
-df_site = df_name['On site']
+df_site = df_name[['On site']].copy()
 df_site = df_site.head(3)
 df_site['Steps'] = 0
 st.dataframe(df_office)

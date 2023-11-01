@@ -35,3 +35,8 @@ with col1:
 
   with col12:
     daily_steps = st.number_input('Daily steps')
+
+
+date = st.date_input('select date')
+
+st.write(date)

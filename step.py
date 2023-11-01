@@ -9,4 +9,8 @@ df_name = pd.read_csv(name_url)
 col_drop = ['Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5']
 df_name = df_name.drop(columns=col_drop)
 st.image(logo_url)
-st.dataframe(df_name)
+
+df_office = df_name['OFFICE']
+df_site = df_name['On Site']
+st.dataframe(df_office)
+st.dataframe(df_site)

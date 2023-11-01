@@ -11,6 +11,9 @@ df_name = df_name.drop(columns=col_drop)
 st.image(logo_url)
 
 df_office = df_name['OFFICE']
+df_office['Steps'] = 0
 df_site = df_name['On site']
+df_site = df_site.head(3)
+df_site['Steps'] = 0
 st.dataframe(df_office)
 st.dataframe(df_site)

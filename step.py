@@ -27,3 +27,4 @@ col1, col2 = st.columns(2)
 with col1:
 
   name_select = st.selectbox('Your name', office_list)
+  daily_steps = st.input_number('Daily steps')

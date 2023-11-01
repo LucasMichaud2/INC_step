@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import numpy as np
 
 st.set_page_config(layout='wide')
 
@@ -17,3 +18,12 @@ df_site = df_site.head(3)
 df_site['Steps'] = 0
 st.dataframe(df_office)
 st.dataframe(df_site)
+
+office_list = df_office['OFFICE'].tolist()
+
+
+col1, col2 = st.columns(2)
+
+with col1:
+
+  name_select = st.selectbox('Your name', office_list)

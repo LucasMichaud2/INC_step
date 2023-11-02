@@ -46,7 +46,7 @@ if submitted:
 
   import git
 
-  repo = git.Repo('https://raw.github.com/LucasMichaud2/INC_step/main/)
+  repo = git.Repo('https://raw.github.com/LucasMichaud2/INC_step/main/')
   repo.index.add(['https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv'])
   repo.index.commit("Update CSV file")
   repo.remote().push()

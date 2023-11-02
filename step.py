@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
+import requests
 
 st.set_page_config(layout='wide')
 
@@ -44,13 +45,32 @@ if submitted:
 
   df_office.loc[df_office['Office'] == name_select, date] = daily_steps
 
-  df_office.to_csv('https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv')
+  csv_data = df_office.to_csv()
 
-  import git
+  headers = {
+    "Authorization": "token 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",
+    "Content-Type": "application/json",
+  }
 
-  repo = git.Repo('https://raw.github.com/LucasMichaud2/INC_step/main/')
-  repo.index.add(['https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv'])
-  repo.index.commit("Update CSV file")
-  repo.remote().push()
+  payload = {
+    "message": "Update CSV file",
+    "content": csv_data,
+    "sha": "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"
+  }
+
+  response = requests.put(
+    "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv",
+    headers=headers,
+    json=payload,
+  )
+
+  if response.status_code == 200:
+    st.success("CSV file updated succesfully on Github!")
+
+  else:
+    st.error("Failed to update CSV file on Github."
+    
+
+    
     
   st.dataframe(df_office)

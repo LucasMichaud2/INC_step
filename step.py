@@ -72,5 +72,4 @@ if submitted:
     
 
     
-    
-st.dataframe(df_office)
+  

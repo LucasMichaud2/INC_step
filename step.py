@@ -52,7 +52,7 @@ if submitted:
     "Content-Type": "application/json",
   }
 
-  sha_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"
+  sha_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/main/office_steps.csv"
   sha_response = requests.get(sha_url, headers=headers)
 
   if sha_response.status_code == 200:
@@ -64,7 +64,7 @@ if submitted:
       "sha": sha,
     }
 
-    update_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"
+    update_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/main/office_steps.csv"
     response = requests.put(update_url, headers=headers,  json=payload)
 
 

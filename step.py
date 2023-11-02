@@ -52,20 +52,29 @@ if submitted:
     "Content-Type": "application/json",
   }
 
-  payload = {
-    "message": "Update CSV file",
-    "content": csv_data,
-    "sha": "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"
-  }
+  sha_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"
+  sha_response = requests.get(sha_url, headers=headers)
 
-  response = requests.put(
-    "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv",
-    headers=headers,
-    json=payload,
-  )
+  if sha_response.status_code == 200:
+    sha = sha_response.json().get("sha")
 
-  if response.status_code == 200:
-    st.success("CSV file updated succesfully on Github!")
+    payload = {
+      "message": "Update CSV file",
+      "content": csv_data,
+      "sha": sha,
+    }
+
+    update_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"
+    response = requests.put(update_url, headers=headers,  json=payload)
+
+
+    if response.status_code == 200:
+      st.success("CSV file updated succesfully on Github!")
+  
+    else:
+      st.error("Failed to update CSV file on Github."
 
   else:
-    st.error("Failed to update CSV file on Github."
+    st.error("Failed to retrieve SHA of the existing file from GitHub.")
+
+st.dataframe(df_office)

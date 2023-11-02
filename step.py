@@ -33,11 +33,28 @@ with col1:
 
 st.write(date)
 
-submitted = st.form_submit_button("Submit")
 
+
+# Create a form using st.form
+with st.form("my_form"):
+    # Add a text input field for the user to enter a name
+    name = st.text_input("Enter your name")
+
+    # Add a submit button
+    submitted = st.form_submit_button("Submit")
+
+# Check if the "Submit" button was clicked
 if submitted:
+    # Display a message with the submitted name
+    st.write(f"Hello, {name}!")
+
+# You can also add more form elements here if needed
+
+# Display the result
+
+
   
 
-  df_office.loc[df_office['Office'] == name_select, date] = daily_steps
+df_office.loc[df_office['Office'] == name_select, date] = daily_steps
   
-  st.dataframe(df_office)
+st.dataframe(df_office)

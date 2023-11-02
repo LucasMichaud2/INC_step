@@ -74,4 +74,7 @@ if submitted:
     else:
       st.error("Failed to update CSV file on Github.")
 
+  else:
+    st.error("Failed retrieve Sha")
+
 st.dataframe(df_office)

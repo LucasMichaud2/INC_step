@@ -29,10 +29,15 @@ with col1:
     daily_steps = st.number_input('Daily steps')
 
 
-date = st.date_input('select date')
+  date = st.date_input('select date')
 
 st.write(date)
 
-df_office.loc[df_office['Office'] == name_select, date] = daily_steps
+submitted = st.form_submit_button("Submit")
 
-st.dataframe(df_office)
+if submitted:
+  
+
+  df_office.loc[df_office['Office'] == name_select, date] = daily_steps
+  
+  st.dataframe(df_office)

@@ -48,7 +48,7 @@ if submitted:
   csv_data = df_office.to_csv()
 
   headers = {
-    "Authorization": "token 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",
+    "Authorization": "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",
     "Content-Type": "application/json",
   }
 

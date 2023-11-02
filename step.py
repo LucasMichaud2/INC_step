@@ -41,5 +41,7 @@ if submitted:
   
 
   df_office.loc[df_office['Office'] == name_select, date] = daily_steps
+
+  df_office.to_csv('https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv')
     
   st.dataframe(df_office)

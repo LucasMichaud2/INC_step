@@ -6,11 +6,12 @@ st.set_page_config(layout='wide')
 
 logo_url = 'https://raw.github.com/LucasMichaud2/INC_step/main/INC_Step_Challenge.jpg'
 name_url = 'https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv'
-df_name = pd.read_csv(name_url)
+df_office = pd.read_csv(name_url)
 st.image(logo_url)
+office_name = df_office['Office'].tolist()
 
 
-st.dataframe(df_name) 
+st.dataframe(df_office) 
 
 
 col1, col2 = st.columns(2)
@@ -22,7 +23,7 @@ with col1:
   col11, col12 = st.columns(2)
 
   with col11:
-    name_select = st.selectbox('Your name', office_list)
+    name_select = st.selectbox('Your name', office_name)
 
   with col12:
     daily_steps = st.number_input('Daily steps')

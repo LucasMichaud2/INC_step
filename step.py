@@ -72,6 +72,6 @@ if submitted:
       st.success("CSV file updated succesfully on Github!")
   
     else:
-      st.error("Failed to update CSV file on Github."
+      st.error("Failed to update CSV file on Github.")
 
 st.dataframe(df_office)

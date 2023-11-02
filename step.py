@@ -74,5 +74,4 @@ if submitted:
     else:
       st.error("Failed to update CSV file on Github."
 
- 
-st.dataframe(df_office)
+  st.dataframe(df_office)

@@ -10,7 +10,7 @@ df_name = pd.read_csv(name_url)
 st.image(logo_url)
 
 
-st.dataframe(df_name)
+st.dataframe(df_name) 
 
 
 col1, col2 = st.columns(2)

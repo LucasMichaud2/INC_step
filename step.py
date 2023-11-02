@@ -33,6 +33,6 @@ date = st.date_input('select date')
 
 st.write(date)
 
-df_office.loc[df_office['Office'] == name_select, date] = 3000
+df_office.loc[df_office['Office'] == name_select, date] = daily_steps
 
 st.dataframe(df_office)

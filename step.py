@@ -69,7 +69,3 @@ if submitted:
 
   else:
     st.error("Failed to update CSV file on Github."
-    
-
-    
-  

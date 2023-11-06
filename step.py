@@ -1,6 +1,7 @@
 import os
 import requests
 import pandas as pd
+import streamlit as st
 
 # GitHub repository information
 owner = "LucasMichaud2"

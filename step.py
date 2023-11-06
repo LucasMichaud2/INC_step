@@ -12,6 +12,9 @@ file_path = "https://raw.githubusercontent.com/LucasMichaud2/INC_step/main/offic
 # Read and update the CSV data
 df = pd.read_csv(file_path)
 
+github_token = os.environ.get('GITHUB_TOKEN')
+print(f"GITHUB_TOKEN value: {github_token}")
+
 with st.form("form1"):
 # Your update logic here
   new_value = st.number_input('heelo')

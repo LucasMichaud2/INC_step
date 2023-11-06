@@ -24,7 +24,7 @@ if submitted:
   updated_csv = df.to_csv(index=False)
   
   # GitHub API endpoint
-  url = f"https://api.github.com/repos/{owner}/{repo}/contents/'office_steps.csv'"
+  url = f"https://api.github.com/repos/{owner}/{repo}/contents/office_steps.csv"
   
   # Prepare the request headers
   headers = {

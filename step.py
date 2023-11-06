@@ -54,7 +54,7 @@ if submitted:
   }
 
   sha_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"
-  sha_response = requests.get(sha_url, headers=headers)
+  sha_response = 200 #requests.get(sha_url, headers=headers)
   st.write(sha_response)
 
   if sha_response.status_code == 200:
@@ -63,7 +63,7 @@ if submitted:
     payload = {
       "message": "Update CSV file",
       "content": csv_data,
-      "sha": sha,
+      "sha": "peuneogJjUumOnbZdb52zZbp10ZbcrDYwyyUZ+7hE1Y",
     }
 
     update_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"

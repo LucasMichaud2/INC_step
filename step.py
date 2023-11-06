@@ -28,7 +28,7 @@ if submitted:
   
   # Prepare the request headers
   headers = {
-      "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
+      "Authorization": f"Bearer {os.environ['TOKEN']}",
   }
   
   # Prepare the request data

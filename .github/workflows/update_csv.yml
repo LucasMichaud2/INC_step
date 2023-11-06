@@ -17,4 +17,4 @@ jobs:
         run: |
           python step.py
         env:
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

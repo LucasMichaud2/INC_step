@@ -1,0 +1,20 @@
+name: Update CSV on Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-csv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Update CSV
+        run: |
+          python step.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.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 }}

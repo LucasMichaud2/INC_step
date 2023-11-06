@@ -6,7 +6,8 @@ import streamlit as st
 # GitHub repository information
 owner = "LucasMichaud2"
 repo = "INC_step"
-file_path = "https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv"
+file_path = "https://raw.githubusercontent.com/LucasMichaud2/INC_step/main/office_steps.csv"
+
 
 # Read and update the CSV data
 df = pd.read_csv(file_path)

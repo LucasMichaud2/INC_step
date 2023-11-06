@@ -23,11 +23,11 @@ if submitted:
   updated_csv = df.to_csv(index=False)
   
   # GitHub API endpoint
-  url = f"https://api.github.com/repos/{owner}/{repo}/contents/{file_path}"
+  url = f"https://api.github.com/repos/{owner}/{repo}/contents/'office_steps.csv'"
   
   # Prepare the request headers
   headers = {
-      "Authorization": f"Bearer {os.environ['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']}",
+      "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
   }
   
   # Prepare the request data

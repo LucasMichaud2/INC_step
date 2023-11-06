@@ -54,6 +54,8 @@ if submitted:
   }
 
   sha_url = "https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv"
+  cu = curl("https://api.github.com/repos/LucasMichaud2/INC_step/contents/office_steps.csv")
+  st.write(cu)
   sha_response = requests.get(sha_url, headers=headers)
 
   if sha_response.status_code == 200:

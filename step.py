@@ -16,12 +16,14 @@ st.image(logo_url)
 office_name = df_office['Office'].tolist()
 st.dataframe(df_office) 
 
-office_board=[['Office', 'Steps']]
+office_board=df_office[['Office', 'Steps']]
 temp_data = df_office.copy()
 col_to_drop = ['Office', 'Steps']
 temp_data = temp_data.drop(columns=col_to_drop)
 
 temp_data['Total Steps'] = temp_data.sum(axis=1)
+
+office_boards['Steps'] = temp_data['Total Steps']
 
 
 st.dataframe(df_office) 

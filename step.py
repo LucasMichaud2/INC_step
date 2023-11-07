@@ -21,7 +21,7 @@ temp_data = df_office.copy()
 col_to_drop = ['Office', 'Steps']
 temp_data = temp_data.drop(columns=col_to_drop)
 
-office_board['Total Steps'] = temp_data.sum(axis=1)
+temp_data['Total Steps'] = temp_data.sum(axis=1)
 
 
 st.dataframe(df_office) 

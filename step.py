@@ -13,7 +13,7 @@ name_url = 'https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv'
 df_office = pd.read_csv(name_url)
 st.image(logo_url)
 office_name = df_office['Office'].tolist()
-
+st.dataframe(df_office) 
 col_to_drop = ['Office', 'Steps']
 temp_data = df_office.drop(col_to_drop)
 office_board = df_office['Office']

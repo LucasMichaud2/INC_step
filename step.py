@@ -14,9 +14,9 @@ df_office = pd.read_csv(name_url)
 st.image(logo_url)
 office_name = df_office['Office'].tolist()
 st.dataframe(df_office) 
+office_board = df_office['Office']
 col_to_drop = ['Office', 'Steps']
 temp_data = df_office.drop(col_to_drop)
-office_board = df_office['Office']
 office_board['Steps'] = temp_data.sum(axis=1)
 
 

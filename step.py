@@ -19,7 +19,7 @@ st.dataframe(df_office)
 office_board=[['Office', 'Steps']]
 temp_data = df_office.copy()
 col_to_drop = ['Office', 'Steps']
-temp_data = temp_data.drop(col_to_drop)
+temp_data = temp_data.drop(col_to_drop, axis=1)
 
 office_board['Steps'] = temp_data.sum(axis=1)
 

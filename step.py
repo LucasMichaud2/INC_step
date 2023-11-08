@@ -16,7 +16,7 @@ office_name = df_office['Office'].tolist()
 st.dataframe(df_office) 
 
 office_board = df_office[['Office', 'Steps']]
-st.dataframe(office_board)
+st.dataframe(office_board) 
 temp_data = df_office.copy()
 col_to_drop = ['Office', 'Steps']
 temp_data = temp_data.drop(columns=col_to_drop)

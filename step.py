@@ -22,7 +22,7 @@ def formatting(url):
  one_day = df_office.drop('Steps', axis=1)
  st.dataframe(one_day)
  one_day['Daily Steps'] = one_day.iloc[:, 1:].max(axis=1)
- one_day = df[['Office', 'Daily Steps']]
+ one_day = one_day[['Office', 'Daily Steps']]
  temp_data = df_office.copy()
  col_to_drop = ['Office', 'Steps']
  temp_data = temp_data.drop(columns=col_to_drop)

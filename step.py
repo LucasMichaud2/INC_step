@@ -25,7 +25,7 @@ temp_data['Total Steps'] = temp_data.sum(axis=1)
 
 st.dataframe(temp_data)
 
-office_boards['Steps'] = temp_data[['Total Steps']]
+office_boards['tot'] = temp_data['Total Steps']
 
 
 st.dataframe(df_office) 

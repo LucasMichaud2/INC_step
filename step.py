@@ -73,14 +73,17 @@ with col2:
  with col22:
   st.write('Most Steps in a Day')
   st.dataframe(onsite_day)
-  st.write(' ')
-  st.write(' ')
-  st.write(' ')
-  st.write(' ')
-  st.write(' ')
-  st.write(' ')
-  st.write(' ')
-  st.write(' ')
-  st.image(think_tech)
+
+ st.write(' ')
+ st.write(' ')
+ st.write(' ')
+ st.write(' ')
+ st.write(' ')
+ st.write(' ')
+ st.write(' ')
+ st.write(' ')
+ st.write(' ')
+ st.write(' ')
+ st.image(think_tech)
   
  

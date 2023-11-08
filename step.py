@@ -50,7 +50,7 @@ with col1:
   st.dataframe(office_board)
 
 with col2:
- st.subheader('Office', divider='grey')
+ st.subheader('On Site', divider='grey')
  col21, col22 = st.columns(2)
  with col21:
   st.write('Overall Leaderboard')

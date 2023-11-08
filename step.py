@@ -29,5 +29,5 @@ office_board['Steps'] = temp_data['Total Steps']
 
 
 st.dataframe(df_office) 
-
+ 
 st.dataframe(office_board)

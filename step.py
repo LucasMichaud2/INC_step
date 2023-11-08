@@ -20,7 +20,6 @@ def formatting(url):
  
  office_board = df_office[['Office', 'Steps']]
  one_day = df_office.drop('Steps', axis=1)
- st.dataframe(one_day)
  one_day['Daily Steps'] = one_day.iloc[:, 1:].max(axis=1)
  one_day = one_day[['Office', 'Daily Steps']]
  temp_data = df_office.copy()
@@ -35,7 +34,7 @@ def formatting(url):
  office_board = office_board.sort_values(by='Steps', ascending=False)
  office_board = office_board.reset_index(drop=True)
  office_board.index = range(1, len(office_board) + 1)
- one_day = one_day.sort_values(by='Steps', ascending=False)
+ one_day = one_day.sort_values(by='Daily Steps', ascending=False)
  one_day = one_day.reset_index(drop=True)
  one_day.index = range(1, len(one_day) + 1)
  

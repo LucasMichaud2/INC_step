@@ -10,10 +10,12 @@ st.set_page_config(layout='wide')
 logo_url = 'https://raw.github.com/LucasMichaud2/INC_step/main/INC_Step_Challenge.jpg'
 name_url = 'https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv'
 name_url1 = 'https://raw.github.com/LucasMichaud2/INC_step/main/onsite_steps.csv'
+st.image(logo_url)
+
+
 def formatting(url):
  df_office = pd.read_csv(url)
  df_office = pd.DataFrame(df_office)
- st.image(logo_url)
  office_name = df_office['Office'].tolist()
  
  office_board = df_office[['Office', 'Steps']]

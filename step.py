@@ -13,7 +13,6 @@ df_office = pd.read_csv(name_url)
 df_office = pd.DataFrame(df_office)
 st.image(logo_url)
 office_name = df_office['Office'].tolist()
-st.dataframe(df_office) 
 
 office_board = df_office[['Office', 'Steps']]
 st.dataframe(office_board) 
@@ -23,11 +22,21 @@ temp_data = temp_data.drop(columns=col_to_drop)
 
 temp_data['Total Steps'] = temp_data.sum(axis=1)
 
-st.dataframe(temp_data)
+
 
 office_board['Steps'] = temp_data['Total Steps']
 
 
-st.dataframe(df_office) 
- 
-st.dataframe(office_board)
+col1, col2 = st.columns(2)
+
+with col1:
+ st.subheader('Office', divider='grey')
+ col11, col12 = st.columns(2)
+
+ with col11:
+  st.write('Overall Leaderboard')
+  office_board = office_board.sort_values(by='Steps', ascending=False)
+  office_board = office_board.reset_index()
+  office_board.index = range(1, len(office_board) + 1)
+       
+  st.dataframe(office_board)

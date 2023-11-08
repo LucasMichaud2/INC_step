@@ -10,6 +10,7 @@ st.set_page_config(layout='wide')
 logo_url = 'https://raw.github.com/LucasMichaud2/INC_step/main/INC_Step_Challenge.jpg'
 name_url = 'https://raw.github.com/LucasMichaud2/INC_step/main/office_steps.csv'
 name_url1 = 'https://raw.github.com/LucasMichaud2/INC_step/main/onsite_steps.csv'
+think_tech = 'https://raw.github.com/LucasMichaud2/INC_step/main/Original%20on%20Transparent.png'
 st.image(logo_url)
 
 
@@ -72,4 +73,14 @@ with col2:
  with col22:
   st.write('Most Steps in a Day')
   st.dataframe(onsite_day)
+  st.write(' ')
+  st.write(' ')
+  st.write(' ')
+  st.write(' ')
+  st.write(' ')
+  st.write(' ')
+  st.write(' ')
+  st.write(' ')
+  st.image(think_tech)
+  
  

@@ -20,6 +20,7 @@ def formatting(url):
  
  office_board = df_office[['Office', 'Steps']]
  one_day = df_office.drop('Steps', axis=1)
+ st.dataframe(one_day)
  one_day['Daily Steps'] = one_day.iloc[:, 1].max(axis=1)
  one_day = df[['Office', 'Daily Steps']]
  temp_data = df_office.copy()

@@ -23,6 +23,8 @@ temp_data = temp_data.drop(columns=col_to_drop)
 
 temp_data['Total Steps'] = temp_data.sum(axis=1)
 
+st.dataframe(temp_data)
+
 office_boards['Steps'] = temp_data['Total Steps']
 
 

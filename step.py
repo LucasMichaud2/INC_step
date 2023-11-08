@@ -36,7 +36,7 @@ with col1:
  with col11:
   st.write('Overall Leaderboard')
   office_board = office_board.sort_values(by='Steps', ascending=False)
-  office_board = office_board.reset_index()
+  office_board = office_board.reset_index(drop=True)
   office_board.index = range(1, len(office_board) + 1)
        
   st.dataframe(office_board)

@@ -41,7 +41,7 @@ col1, col2 = st.columns(2)
 
 with col1:
  st.subheader('Office', divider='grey')
- col21, col22 = st.columns(2)
+ col11, col12 = st.columns(2)
 
  with col11:
   st.write('Overall Leaderboard')
@@ -51,8 +51,8 @@ with col1:
 
 with col2:
  st.subheader('Office', divider='grey')
- col11, col12 = st.columns(2)
- with col11:
+ col21, col22 = st.columns(2)
+ with col21:
   st.write('Overall Leaderboard')
   
        

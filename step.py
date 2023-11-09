@@ -54,11 +54,12 @@ with col1:
  with col11:
   st.write('Overall Leaderboard')
   
-       
+  office_board = office_board.rename(columns={'Office': 'Names'})
   st.dataframe(office_board)
 
  with col12:
   st.write('Most Steps in a Day')
+  office_day = office_day.rename(columns={'Office': 'Names'})
   st.dataframe(office_day)
 
 with col2:
@@ -67,11 +68,12 @@ with col2:
  with col21:
   st.write('Overall Leaderboard')
   
-       
+  onsite_board = onsite_board.rename(columns={'Office': 'Names'})
   st.dataframe(onsite_board)
 
  with col22:
   st.write('Most Steps in a Day')
+  onsite_day = onsite_day.rename(columns={'Office': 'Names'})
   st.dataframe(onsite_day)
 
   st.write(' ')
